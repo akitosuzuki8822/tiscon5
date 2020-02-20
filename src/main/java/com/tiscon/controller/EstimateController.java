@@ -27,7 +27,7 @@ public class EstimateController {
     /**
      * コンストラクタ
      *
-     * @param estimateDAO EstimateDaoクラス
+     * @param estimateDAO     EstimateDaoクラス
      * @param estimateService EstimateServiceクラス
      */
     public EstimateController(EstimateDao estimateDAO, EstimateService estimateService) {
@@ -76,12 +76,12 @@ public class EstimateController {
      */
     @PostMapping(value = "submit", params = "confirm")
     String confirm(@Validated UserOrderForm userOrderForm, BindingResult result, Model model) {
-            if (result.hasErrors()) {
+        if (result.hasErrors()) {
 
-                model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
-                model.addAttribute("userOrderForm", userOrderForm);
-                return "input";
-            }
+            model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
+            model.addAttribute("userOrderForm", userOrderForm);
+            return "input";
+        }
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
@@ -163,4 +163,6 @@ public class EstimateController {
         return "complete";
     }
 
+
 }
+

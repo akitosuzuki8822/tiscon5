@@ -22,25 +22,25 @@
       <fieldset>
         <legend>個人情報</legend>
         <div class="form-group">
-          <label for="customerName">氏名<p th:if="${#fields.hasErrors('*{customerName}')}" th:errors="*{customerName}" class="col-sm-12"></p></label>
+          <label for="customerName">氏名<span class="font_test"><p th:if="${#fields.hasErrors('*{customerName}')}" th:errors="*{customerName}" class="col-sm-12"></p></span></label>
           <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
         <div class="form-group">
-          <label for="tel">連絡先TEL<p th:if="${#fields.hasErrors('*{tel}')}" th:errors="*{tel}" class="col-sm-12"></p></label>
+          <label for="tel">連絡先TEL<span class="font_test"><p th:if="${#fields.hasErrors('*{tel}')}" th:errors="*{tel}" class="col-sm-12"></p></span></label>
           <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
-          <label for="email">連絡先メールアドレス<p th:if="${#fields.hasErrors('*{email}')}" th:errors="*{email}" class="col-sm-12"></p></label>
+          <label for="email">連絡先メールアドレス<span class="font_test"><p th:if="${#fields.hasErrors('*{email}')}" th:errors="*{email}" class="col-sm-12"></p></span></label>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="form-group">
-          <label for="oldPrefectureId">転居元住所（都道府県）</label>
+          <label for="oldPrefectureId">転居元住所（都道府県)</label>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="oldAddress">転居元住所（市区町村以下）<p th:if="${#fields.hasErrors('*{oldAddress}')}" th:errors="*{oldAddress}" class="col-sm-12"></p></label>
+          <label for="oldAddress">転居元住所（市区町村以下）<span class="font_test"><p th:if="${#fields.hasErrors('*{oldAddress}')}" th:errors="*{oldAddress}" class="col-sm-12"></p></span></label>
           <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
@@ -51,7 +51,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="newAddress">転居先住所（市区町村以下）<p th:if="${#fields.hasErrors('*{newAddress}')}" th:errors="*{newAddress}" class="col-sm-12"></p></label>
+          <label for="newAddress">転居先住所（市区町村以下）<span class="font_test"><p th:if="${#fields.hasErrors('*{newAddress}')}" th:errors="*{newAddress}" class="col-sm-12"></p></span></label>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
