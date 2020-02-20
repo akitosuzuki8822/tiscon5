@@ -68,10 +68,12 @@
             <option value="40">40個</option>
             <option value="50">50個</option>
             <option value="60">60個</option>
+            <option value="70">70個</option>
+            <option value="80">80個</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数</label>
+          <label for="bed">ベッドの個数 &emsp;&#040; 1台 &rarr; 段ボール20箱 換算 &#041;</label>
           <!--<input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>-->
           <select name="bed" id="bed" th:field="*{bed}" class="form-control" >
             <option value="0">0台</option>
@@ -84,7 +86,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数</label>
+          <label for="bicycle">自転車の個数 &emsp;&#040; 1台 &rarr; 段ボール15箱 換算 &#041;</label>
           <!--<input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>-->
           <select name="bicycle" id="bicycle" th:field="*{bicycle}" class="form-control">
             <option value="0">0台</option>
@@ -97,7 +99,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数</label>
+          <label for="washingMachine">洗濯機の個数 &emsp;&#040; 1台 &rarr; 段ボール10箱 換算 &#041;</label>
           <!--<input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/>-->
           <select name="washingMachine" id="washingMachine" th:field="*{washingMachine}" class="form-control" value="5">
@@ -111,19 +113,26 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
+          <label for="washingMachineInstallation">洗濯機の設置工事申し込み &emsp;&#040; 設置費用 3万 &#041;</label>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
           </select>
         </div>
       </fieldset>
+      <br>
+      <p>&#x203B; 合計の段ボールの個数によりトラック輸送費が変わります。&#040; &#65374;80個 &#058; 3万 &#047; &#65374;200個 &#058; 5万 &#041;
+        <br>
+        &#x203B; 見積もり料金 &#061; 輸送距離による費用 &plus; トラック輸送費 &plus; オプション代金
+      </p>
+      <br>
       <div class="form-group">
         <div class="text-center">
           <button type="submit" name="backToTop" class="btn btn-primary">TOPへ戻る</button>
           <button type="submit" name="confirm" class="btn btn-primary">確認</button>
         </div>
       </div>
+      <br>
     </div>
   </form>
 </div>
