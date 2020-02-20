@@ -80,7 +80,7 @@ public class EstimateController {
 
                 model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
                 model.addAttribute("userOrderForm", userOrderForm);
-                return "confirm";
+                return "input";
             }
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
